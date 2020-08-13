@@ -7,7 +7,7 @@ test
 
 ## rareGWAMA Meta Analysis
 
-[Project 1 Title](/sample_page)
+[Project 1 Title](/rareGWAMA_meta)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
