@@ -4,7 +4,9 @@
 
 ### 1.Pre-request Files & Formats
 
-> * the score.stat.file:The statistics summary files, like:
+
+
+> * the score.stat.file: The statistics summary files, like:
 
 ```
 CHROM   POS     REF     ALT     N_INFORMATIVE   AF      INFORMATIVE_ALT_AC      CALL_RATE       HWE_PVALUE      N_REF   N_HET   N_ALT   U_STAT  SQRT_V_STAT     ALT_EFFSIZE     PVALUE
@@ -18,7 +20,8 @@ CHROM   POS     REF     ALT     N_INFORMATIVE   AF      INFORMATIVE_ALT_AC      
 ### 2.Running rareGWAMA in R
 
 
-### 3.
+### 3.Results
+
 
 
 
