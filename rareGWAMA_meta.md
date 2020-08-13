@@ -4,6 +4,11 @@
 
 ### 1.Pre-request Files & Formats
 
+A typical command of running meta analysis using rareGWAMA is like: 
+
+> * rareGWAMA.single(score.stat.file,imp.qual.file,tabix.range=tabix.range,rmMultiAllelicSite=TRUE,impQualWeight=TRUE,
+                        impQual.lb=0.3,trans.ethnic=TRUE,af.pca=af.pca,gc=TRUE,
+                        lambda=lambda,maf.bin=maf.bin, memo.recalibrate = T)
 
 
 > * the score.stat.file: The statistics summary files, like:
