@@ -8,11 +8,12 @@ A typical command of running meta analysis using rareGWAMA is like:
 
 > * rareGWAMA.single(score.stat.file,imp.qual.file,tabix.range=tabix.range,rmMultiAllelicSite=TRUE,impQualWeight=TRUE,
                impQual.lb=0.3,trans.ethnic=TRUE,af.pca=af.pca,gc=TRUE,
-               
-                        lambda=lambda,maf.bin=maf.bin, memo.recalibrate = T)
+               lambda=lambda,maf.bin=maf.bin, memo.recalibrate = T)
 
 
-> * the score.stat.file: The statistics summary files, like:
+> * the score.stat.file: a vector of string, each element is the address that points to each study's summary statistics
+
+The statistics summary statistics files, like:
 
 ```
 CHROM   POS     REF     ALT     N_INFORMATIVE   AF      INFORMATIVE_ALT_AC      CALL_RATE       HWE_PVALUE      N_REF   N_HET   N_ALT   U_STAT  SQRT_V_STAT     ALT_EFFSIZE     PVALUE
@@ -28,6 +29,8 @@ CHROM   POS     REF     ALT     N_INFORMATIVE   AF      INFORMATIVE_ALT_AC      
 
 ### 3.Results
 
+After running rareGWAMA.single function, a large list will be returned. In order to get a summary of the final results, we can use: 
+> * res$res.formatted
 
 
 
