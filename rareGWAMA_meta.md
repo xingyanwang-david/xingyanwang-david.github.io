@@ -25,6 +25,7 @@ CHROM   POS     REF     ALT     N_INFORMATIVE   AF      INFORMATIVE_ALT_AC      
 If you are using the results from , then it
 
 > * imp.qual.file: a vector of string, each element is the address that points to each study's imputation quality file. 
+
 The order should be the same as score.stat.file.
 
 Each imputation quality file should have the following format: 
@@ -36,6 +37,7 @@ Each imputation quality file should have the following format:
 > * trans.ethnic: a Boolean variable that indicate whether trans-ethnic meta-analysis should be performed. 
 
 > * af.pca: a data frame that includes PCs for each study. 
+
 Each row represents one study. The order should be the same as score.stat.file. Each column should be one PC. Additionally, a column of 1 should be included if you would like to include an intercept. This parameter will only be effective if trans.ethnic = T
 
 A typical 
