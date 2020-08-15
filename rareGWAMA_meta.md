@@ -15,13 +15,18 @@ This part is necessary due to the fact that the reference allele and alternative
 
 #### 0.3 PCs Calculation 
 
-The calculation of PCs is based on MDS (multidimensioanl scaling) using allele frequency. For sanity check, we usually will merge our studies with 1000G project 5 ancesties' allele frequency, ie AFR_AF (African), AMR_AF (Ad Mixed Amrican),  EAS_AF (East Asian), EUR_AF (European), SAS_AF (South Asian). Merge criteria is based on "Chromosome_Position_Reference Allele_Alternative Allele", ie all four areas should be matched. 
+The calculation of PCs is based on MDS (multidimensioanl scaling) using allele frequency. For sanity check, we usually will merge our studies with 1000G project 5 ancesties' allele frequency, ie AFR_AF (African), AMR_AF (Ad Mixed Amrican),  EAS_AF (East Asian), EUR_AF (European), SAS_AF (South Asian). Merge criteria is based on "Chromosome_Position_Reference Allele_Alternative Allele", ie all four areas should be matched. Additionally, we will only include variants that exist in all studies. 
 
 The input of MDS is a distance matrix. The definition of genetic distance based on allele frequency can be discribed as: 
 
+
 #### 0.4 GC Value Calculation 
 
+Genomic control values (GC
 
+Usually, we will calculate GC values for both rare variants and common variants. Rare variants are defined as MAF (Minor Allele Frquency) between 0.1% to 1%. While common varinats are defined as MAF no less than 1%: 
+> * Rare Variants: MAF>= 0.1% & MAF < 1%
+Common Variants: MAF>=1%
 
 
 ### 1.Pre-request Files & Formats
