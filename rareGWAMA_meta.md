@@ -15,9 +15,9 @@ This part is necessary due to the fact that the reference allele and alternative
 
 #### 0.3 PCs Calculation 
 
-The calculation of PCs is based on MDS (multidimensioanl scaling). 
+The calculation of PCs is based on MDS (multidimensioanl scaling) using allele frequency. For sanity check, we usually will merge our studies with 1000G project 5 ancesties' allele frequency, ie AFR_AF (African), AMR_AF (Ad Mixed Amrican),  EAS_AF (East Asian), EUR_AF (European), SAS_AF (South Asian). Merge criteria is based on "Chromosome_Position_Reference Allele_Alternative Allele", ie all four areas should be matched. 
 
-For sanity check, we usually will merge our studies
+The input of MDS is a distance matrix. The definition of 
 
 #### 0.4 GC Value Calculation 
 
