@@ -4,6 +4,15 @@
 
 ### 0.File Preperation & Pre-process
 
+#### Index File Creation
+
+#### Check Flip Variants
+
+#### PCs Calculation 
+
+#### GC Value Calculation 
+
+
 
 
 ### 1.Pre-request Files & Formats
