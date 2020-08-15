@@ -4,13 +4,22 @@
 
 ### 0.File Preperation & Pre-process
 
-#### Index File Creation
+This part is to create the necessity files and check so
 
-#### Check Flip Variants
+#### 0.1 Index File Creation
 
-#### PCs Calculation 
 
-#### GC Value Calculation 
+#### 0.2 Check Flip Variants
+
+This part is necessary due to the fact that the reference allele and alternative allele may not be consistent across all studies. 
+
+#### 0.3 PCs Calculation 
+
+The calculation of PCs is based on MDS (multidimensioanl scaling). 
+
+For sanity check, we usually will merge our studies
+
+#### 0.4 GC Value Calculation 
 
 
 
@@ -60,10 +69,14 @@ A typical
 
 ### 3.Results
 
+#### 3.1 Results Summary
 After running rareGWAMA.single function, a large list will be returned. In order to get a summary of the final results, we can use: 
 > * res$res.formatted
 
+#### 3.2 Manhattan Plot & QQ plot
 
+
+#### 3.3 Tree Plot
 
 
 For more details, please contact 
