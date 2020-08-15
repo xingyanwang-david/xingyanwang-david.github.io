@@ -2,6 +2,10 @@
 
 **Introduction to rareGWAMA**
 
+### 0.File Preperation & Pre-process
+
+
+
 ### 1.Pre-request Files & Formats
 
 A typical command of running meta analysis using rareGWAMA is like: 
