@@ -4,14 +4,27 @@
 
 ### 0.File Preperation & Pre-process
 
-This part is to create the necessity files and check so
+This part is to create the necessity files and check the study validity. In general, the following files are needed: 
+- Index File
+- Summary statistics file for each study
+- Imputation file for each study
+- Principle components file
+- Genomic control file
 
 #### 0.1 Index File Creation
-
+Index file is a file that can locate all data sets that would like to be meta-analyzed. A suggest format of index file can have the following format: 
+```
+Study01_name  Study01_summary_statistics_location Study01_imputation_file_location
+Study02_name  Study02_summary_statistics_location Study03_imputation_file_location
+Study03_name  Study03_summary_statistics_location Study03_imputation_file_location
+Study04_name  Study04_summary_statistics_location Study04_imputation_file_location
+...
+```
+By creating this file, it is easier to get access to each study's file without accidently modifying files. 
 
 #### 0.2 Check Flip Variants
 
-This part is necessary due to the fact that the reference allele and alternative allele may not be consistent across all studies. 
+This part is necessary due to the fact that the reference allele and alternative allele may not be consistent across all studies. If that case happens, it is necessary to "flip" corresponding summary statistics, including: AF (alternative allele frequency), Z-score statistics etc. 
 
 #### 0.3 PCs Calculation 
 
