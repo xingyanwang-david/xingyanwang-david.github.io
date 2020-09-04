@@ -53,21 +53,21 @@ A typical command of running meta analysis using rareGWAMA is like:
 
 > * score.stat.file: a vector of string, each element is the address that points to each study's summary statistics
 > * imp.qual.file: a vector of string, each element is the address that points to each study's imputation quality file. 
-> * tabix.range: a string that indicates the tabix range of interest
-
+> * tabix.range: a string that indicates the tabix range of interest. 
+> * rmMultiAllelicSite: a Boolean variable that indicating if multiallelic site should be removed. 
+> * impQualWeight
 > * impQual.lb: a numeric value from 0 to 1 to indicate the imputation quality lower bound 
-
-> * trans.ethnic: a Boolean variable that indicate whether trans-ethnic meta-analysis should be performed. 
-
-> * af.pca: a data frame that includes PCs for each study. 
-
-Each row represents one study. The order should be the same as score.stat.file. Each column should be one PC. Additionally, a column of 1 should be included if you would like to include an intercept. This parameter will only be effective if trans.ethnic = T
-
-A typical 
+> * trans.ethnic: a Boolean variable that indicate whether trans-ethnic meta-analysis should be performed. If set to true, then af.pca should also be provided. 
+> * af.pca: a data frame that includes PCs for each study with the first column of 1, indicating intercept in the model. 
+> * gc: a Boolean variable that indicate whether by-study genomic control should be performed. 
+> * lambda: genomic control value matrix
+> * maf.bin: 
+> * memo.recalibrate: a calibrated version of MEMO model. Set these value to T all the time to get reliable results.
 
 ### 2.Input Files & Argument
+All the score statistics files and imputation quality files should be tabix indexed.
+#### Summary Statistics File
 Each summary statistics file should have the following format:
-
 ```
 CHROM   POS     REF     ALT     N_INFORMATIVE   AF      INFORMATIVE_ALT_AC      CALL_RATE       HWE_PVALUE      N_REF   N_HET   N_ALT   U_STAT  SQRT_V_STAT     ALT_EFFSIZE     PVALUE
 1       10177   A       AC      2352    0.5     2352    1       0       0       2352    0       1.67496 2.51553 0.264695        0.505508
@@ -75,11 +75,23 @@ CHROM   POS     REF     ALT     N_INFORMATIVE   AF      INFORMATIVE_ALT_AC      
 1       10352   T       TA      2352    0.5     2352    1       0       0       2352    0       0.665562        2.61389 0.0974122       0.799013
 1       10539   C       A       2352    0       0       1       1       2352    0       0       -0.00020902     0.0626305       -0.0532862      0.997337
 ```
-If you are using the results from , then it
+If you are using the results from rvtest, then the result is good to go. 
 
-The order should be the same as score.stat.file.
-
+#### Imputation Quality File 
 Each imputation quality file should have the following format: 
+```
+CHROM   POS     REF     ALT     Rsq
+1       10177   A       AC      0.00581
+1       10235   T       TA      0.00396
+1       10352   T       TA      0.00608
+1       10539   C       A       0.00154
+1       10616   CCGCCGTTGCAAAGGCGCGCCG  C       0.02085
+1       10642   G       A       0.00013
+```
+
+
+
+
 ### 3.Results
 
 #### 3.1 Results Summary
